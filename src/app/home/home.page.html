@@ -17,19 +17,31 @@
         <ion-card-content>
           <ion-item>
             <ion-label position="floating">Heigh (CM)</ion-label>
-            <ion-input type="number"></ion-input>
+            <ion-input type="number" [(ngModel)]="heigh"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="floating">Weight (Kg)</ion-label>
-            <ion-input type="number"></ion-input>
+            <ion-input type="number" [(ngModel)]="weight"></ion-input>
           </ion-item>
           <div class="ion-text-right">
-            <ion-button (click)="onClick()">
+            <ion-button (click)="bmiCalculation()">
             <ion-icon slot="start" name="accessibility-outline"></ion-icon>
             Calculat BMI
             </ion-button>
           </div>
-
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="bmi">
+    <ion-col size-md="6" offset-md="3">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Your are {{description}}</ion-card-title>
+          <ion-card-subtitle>Your results is : {{bmi|number}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img class="imgStyle" [src]="imgSrc"></ion-img>
         </ion-card-content>
       </ion-card>
     </ion-col>

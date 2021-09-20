@@ -29,3 +29,12 @@
 ion-content {
   --background:  linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
+
+ion-img {
+  scale: 10%;
+}
+
+.imgStyle {
+  height: 200px;
+  object-fit: contain;
+}
